@@ -1,0 +1,33 @@
+tailwind css setup
+
+1> layouts (folder)
+   
+   -> index.html
+   -> css_output (folder)
+       -> styles.css
+** link this styles.css file with index.html 
+<link rel="stylesheet" href="./css_output/styles.css" />
+
+2> terminal code:
+# npm -v
+# npm init y 
+# npm install -D tailwindcss
+# npx tailwindcss init 
+  ...here create config file -> content: ['./layouts/*.html/']
+
+3> src (folder) create 
+ -> tailwind.css (file) create ,This is tailwind file
+  -> 3 line code
+       @tailwind base;
+       @tailwind components;
+       @tailwind utilities;
+
+4> this is not css code, its tailwind code for that get error so,
+   -> .vscode (folder)
+   -> settings.json file
+     {"css.validate": false,
+      "tailwindCSS.emmetCompletions": true,
+     }
+
+4> npx tailwindcss -i src/tailwind.css(related to rules 3) -o ./layouts/css_output/styles.css(rules 1) --watch
+run this code in termnal wihtout brackets 
